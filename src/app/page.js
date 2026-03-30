@@ -3,12 +3,18 @@
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 import Tilt from "react-parallax-tilt";
+import SkillsSection from "./components/SkillsSection";
 
 const projects = [
   {
     title: "XtremeNext Trading Platform",
     desc: "A scalable white-label trading system powering 160+ mobile applications across Play Store & App Store.",
     slug: "trading",
+  },
+  {
+    title: "Kooturavu Platform",
+    desc: "Enterprise inspection system with dynamic forms, offline sync, and 300+ conditional questions",
+    slug: "kooturavu",
   },
   {
     title: "Blutasker Service Marketplace",
@@ -75,26 +81,35 @@ export default function Portfolio() {
             transition={{ delay: 0.6 }}
             className="mt-10 flex gap-5"
           >
-            <a
-              href="/Barath_Flutter_Developer.pdf"
-              download
-              className="px-8 py-3 bg-gradient-to-r from-purple-500 to-blue-500 rounded-xl text-lg font-semibold hover:scale-110 transition"
-            >
-              Download Resume
-            </a>
-            <a
-              href="https://linkedin.com/in/barath-d-69232b165"
-              target="_blank"
-              className="px-8 py-3 border border-gray-600 rounded-xl text-lg hover:scale-110 transition"
-            >
-              LinkedIn
-            </a>
-            <a
-              href="mailto:barathkrishna14@gmail.com"
-              className="px-8 py-3 border border-gray-600 rounded-xl text-lg hover:scale-110 transition"
-            >
-              Contact
-            </a>
+            <div className="mt-10 flex flex-col sm:flex-row gap-4 w-full max-w-md sm:max-w-none justify-center">
+
+  {/* Resume */}
+  <a
+    href="/Barath_Flutter_Developer.pdf"
+    download
+    className="w-full sm:w-auto text-center px-6 py-3 bg-gradient-to-r from-purple-500 to-blue-500 rounded-xl font-semibold hover:scale-105 transition"
+  >
+    Download Resume
+  </a>
+
+  {/* LinkedIn */}
+  <a
+    href="https://linkedin.com/in/barath-d-69232b165"
+    target="_blank"
+    className="w-full sm:w-auto text-center px-6 py-3 border border-gray-600 rounded-xl hover:bg-gray-800 transition"
+  >
+    LinkedIn
+  </a>
+
+  {/* Contact */}
+  <a
+    href="mailto:barathkrishna14@gmail.com"
+    className="w-full sm:w-auto text-center px-6 py-3 border border-gray-600 rounded-xl hover:bg-gray-800 transition"
+  >
+    Contact
+  </a>
+
+</div>
           </motion.div>
         </section>
 
@@ -116,6 +131,9 @@ export default function Portfolio() {
             </motion.div>
           ))}
         </section>
+        {/* Skills */}
+
+        <SkillsSection />
 
         {/* PROJECTS */}
         <section className="px-6 py-20 max-w-6xl mx-auto">
