@@ -39,8 +39,8 @@ const data = {
                 platform: "android",
             },
             {
-                name: "TradeXN",
-                link: "https://play.google.com/store/apps/details?id=com.e.tradexn",
+                name: "MyFX",
+                link: "https://play.google.com/store/apps/details?id=com.e.myforex_cart",
                 platform: "android",
             },
             {
