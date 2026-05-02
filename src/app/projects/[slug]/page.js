@@ -39,8 +39,8 @@ const data = {
                 platform: "android",
             },
             {
-                name: "MyFX",
-                link: "https://play.google.com/store/apps/details?id=com.e.myforex_cart",
+                name: "Astar Capitals",
+                link: "https://play.google.com/store/apps/details?id=com.e.astar_capital",
                 platform: "android",
             },
             {

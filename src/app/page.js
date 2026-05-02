@@ -71,7 +71,7 @@ export default function Portfolio() {
             transition={{ delay: 0.3 }}
             className="text-gray-400 text-xl max-w-2xl leading-relaxed"
           >
-            Senior Flutter Engineer crafting scalable real-time systems,
+            Flutter Engineer crafting scalable real-time systems,
             delivering 160+ production apps with high performance & reliability.
           </motion.p>
 
