@@ -13,7 +13,7 @@ const projects = [
   },
   {
     title: "Kooturavu Platform",
-    desc: "Enterprise inspection system with dynamic forms, offline sync, and 300+ conditional questions",
+    desc: "Enterprise inspection system with dynamic forms, offline sync, and conditional questions",
     slug: "kooturavu",
   },
   {
@@ -143,30 +143,35 @@ export default function Portfolio() {
 
           <div className="grid md:grid-cols-2 gap-10">
             {projects.map((p, i) => (
-              <Tilt
-                key={i}
-                tiltMaxAngleX={10}
-                tiltMaxAngleY={10}
-                glareEnable={true}
-                glareMaxOpacity={0.2}
-              >
-                <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  onClick={() => router.push(`/projects/${p.slug}`)}
-                  className="cursor-pointer p-8 backdrop-blur-xl bg-white/5 rounded-2xl border border-white/10 hover:border-purple-400 transition"
-                >
-                  {/* <h3 className="text-xl font-semibold mb-3">{p.title}</h3>
-                  <p className="text-gray-400">{p.desc}</p> */}
-                  <h3 className="text-2xl font-semibold mb-3 leading-snug">
-                    {p.title}
-                  </h3>
+  <Tilt
+    key={p.slug} // ✅ better than index
+    tiltMaxAngleX={10}
+    tiltMaxAngleY={10}
+    glareEnable={true}
+    glareMaxOpacity={0.2}
+  >
+    <motion.div
+      whileHover={{ scale: 1.05 }}
+      onClick={() => router.push(`/projects/${p.slug}`)}
+      className="group cursor-pointer p-8 backdrop-blur-xl bg-white/5 rounded-2xl border border-white/10 hover:border-purple-400 transition"
+    >
+      <h3 className="text-2xl font-semibold mb-3 leading-snug">
+        {p.title}
+      </h3>
 
-                  <p className="text-gray-400 text-sm leading-relaxed">
-                    {p.desc}
-                  </p>
-                </motion.div>
-              </Tilt>
-            ))}
+      <p className="text-gray-400 text-sm leading-relaxed">
+        {p.desc}
+      </p>
+
+      {/* 🔥 Arrow Section */}
+      <div className="flex justify-end mt-6">
+        <span className="text-cyan-300 text-lg transition transform group-hover:translate-x-2">View →</span>
+       
+      </div>
+      
+    </motion.div>
+  </Tilt>
+))}
           </div>
         </section>
 

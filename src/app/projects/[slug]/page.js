@@ -183,7 +183,7 @@ const data = {
         subtitle: "Enterprise-grade dynamic form & field inspection system",
 
         metrics: [
-            "300+ Questions",
+            "Dynamic Questions",
             "Offline First",
             "10+ Input Types",
         ],
@@ -197,7 +197,7 @@ const data = {
             "Built a dynamic form engine using a type-driven widget factory pattern with multi-level conditional logic, real-time validation, and offline-first data synchronization.",
 
         impact: [
-            "Handled 300+ dynamic conditional questions",
+            "Handled dynamic conditional questions",
             "Enabled reliable offline inspections in rural areas",
             "Improved inspection efficiency and data accuracy",
         ],
